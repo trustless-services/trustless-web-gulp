@@ -1,0 +1,61 @@
+nav > .trustless-color {
+  background-color: #FF9900 !important;
+}
+
+.row {
+  border-radius: .3rem;
+}
+
+a {
+  color: #646a70;
+}
+
+a:hover {
+  color: #444a50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+.jumbotron, .jumbotron > h1, .jumbotron > h2, .jumbotron > h3 {
+  background-color: #FF9900 !important;
+  color: #FFFFFF;
+}
+
+.jumbotron > a {
+  color: #CCCCCC;
+}
+
+.jumbotron > a:hover {
+  color: #BCBCBC;
+}
+
+.container > .trustless-color {
+  background-color: #FF9900 !important;
+  color: #FFFFFF;
+}
+
+.container > .trustless-color-light {
+  background-color: #FFBB00 !important;
+  color: #FFFFFF;
+}
+
+.trustless-color h1, .trustless-color h2, .trustless-color h3 {
+  color: #FFFFFF;
+}
+
+.trustless-color-light h1, .trustless-color-light h2, .trustless-color-light h3 {
+  color: #FFFFFF;
+}
+
+footer {
+  color: rgba(0,0,0,.5);
+}
+
+ul {
+  list-style: none;
+}
