@@ -16,6 +16,14 @@ a:hover {
   color: #646a70;
 }
 
+h1 > a {
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
