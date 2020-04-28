@@ -9,6 +9,7 @@
 
 a {
   color: #444a50;
+  text-decoration: underline;
 }
 
 a:hover {
