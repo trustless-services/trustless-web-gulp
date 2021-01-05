@@ -9,10 +9,19 @@
 
 a {
   color: #444a50;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #646a70;
+}
+
+h1 > a {
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
