@@ -4,7 +4,7 @@ const ejs = require('gulp-ejs');
 const replace = require('gulp-replace');
 const deploy = require('gulp-gh-pages')
 
-// Builds ejs and deploys /dist recursively
+// Builds ejs
 gulp.task('ejs', done => {
   gulp
     .src(["ejs/**/*.ejs", "!" + "ejs/**/_*.ejs"])
@@ -13,4 +13,10 @@ gulp.task('ejs', done => {
     .pipe(gulp.dest("./dist"))
     .pipe(deploy());
   done();
+})
+
+// Deploys /dist recursively
+gulp.task('deploy', () => {
+  gulp.src('./dist/**/*')
+    .pipe(deploy())
 })
