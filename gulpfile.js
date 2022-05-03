@@ -18,5 +18,11 @@ gulp.task('ejs', done => {
 // Deploys /dist recursively
 gulp.task('deploy', () => {
   gulp.src('./dist/**/*')
-    .pipe(deploy())
+    .pipe(deploy({
+      remoteUrl: 'https://github.com/trustless-services/trustless-web-gulp.git',
+      origin: 'origin',
+      branch: 'gh-pages',
+      push: true,
+      force: true
+    }))
 })
