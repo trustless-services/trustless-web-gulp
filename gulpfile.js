@@ -17,8 +17,6 @@ gulp.task('ejs', done => {
 // Builds css
 gulp.task('css', done => {
   gulp.src(["public/*.css"])
-    .pipe(concat('style.css'))
-    .pipe(minify())
     .pipe(gulp.dest('dist/css'))
   done();
 })
