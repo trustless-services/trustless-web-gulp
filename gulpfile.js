@@ -22,7 +22,7 @@ gulp.task('css', done => {
 
 // Deploys /dist recursively
 gulp.task('deploy', done => {
-  gulp.src(['./dist/**/*.html', './dist/**/*.css', './dist/**/*.js'])
+  gulp.src(['./dist/**/*.html', './dist/**/*.css', './dist/**/*.js', './dist/**/CNAME'])
     .pipe(deploy({
       remoteUrl: 'https://github.com/trustless-services/trustless-web-gulp.git',
       origin: 'origin',
