@@ -15,14 +15,14 @@ gulp.task('ejs', done => {
 
 // Builds css
 gulp.task('css', done => {
-  gulp.src(["public/**/*.css"])
-    .pipe(gulp.dest('dist/css'))
+  gulp.src("public/**/*.css")
+    .pipe(gulp.dest("./dist/css"))
   done();
 })
 
 // Deploys /dist recursively
 gulp.task('deploy', done => {
-  gulp.src('./dist/**/*')
+  gulp.src(['./dist/**/*.html', './dist/**/*.css', './dist/**/*.js'])
     .pipe(deploy({
       remoteUrl: 'https://github.com/trustless-services/trustless-web-gulp.git',
       origin: 'origin',
