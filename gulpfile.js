@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const ejs = require('gulp-ejs');
-const replace = require('gulp-replace');
 const deploy = require('gulp-gh-pages')
 
 // Builds ejs
@@ -16,7 +15,7 @@ gulp.task('ejs', done => {
 
 // Builds css
 gulp.task('css', done => {
-  gulp.src(["public/*.css"])
+  gulp.src(["public/**/*.css"])
     .pipe(gulp.dest('dist/css'))
   done();
 })
