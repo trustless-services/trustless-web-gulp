@@ -36,7 +36,7 @@ gulp.task('config-yaml', done => {
 
 // Deploys /dist recursively
 gulp.task('deploy', done => {
-  gulp.src(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/CNAME', 'dist/.well-known/*', 'dist/_config.yml'])
+  gulp.src(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/CNAME', 'dist/.well-known/lnurlp/*.*', 'dist/*.yml'])
     .pipe(deploy({
       remoteUrl: 'https://github.com/trustless-services/trustless-web-gulp.git',
       origin: 'origin',
