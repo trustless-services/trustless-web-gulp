@@ -1,0 +1,10 @@
+{
+    "names": {
+        "_": "d2b6b012485ec6dbfc7d844446d2608120d25dc54e432555582c78ce9bb65dc4"
+    },
+    "relays": {
+        "d2b6b012485ec6dbfc7d844446d2608120d25dc54e432555582c78ce9bb65dc4": [
+            "wss://relay-jp.nostr.wirednet.jp"
+        ]
+    }
+}
