@@ -20,6 +20,20 @@ gulp.task('css', done => {
   done();
 })
 
+// Copy .well-known
+gulp.task('well-known', done => {
+    gulp.src(".well-known/**/*.json")
+        .pipe(gulp.dest("./dist/.well-known"))
+    done();
+})
+
+// Copy _config.yml (needed for GH to not ignore .well-known folder)
+gulp.task('config-yaml', done => {
+    gulp.src("_config.yml")
+        .pipe(gulp.dest("./dest/_config.yml"))
+    done();
+})
+
 // Deploys /dist recursively
 gulp.task('deploy', done => {
   gulp.src(['dist/**/*.html', 'dist/**/*.css', 'dist/**/*.js', 'dist/CNAME'])
