@@ -22,15 +22,15 @@ gulp.task('css', done => {
 
 // Copy .well-known
 gulp.task('well-known', done => {
-    gulp.src(".well-known/**/*.json")
-        .pipe(gulp.dest("./dist/.well-known"))
+    gulp.src(['.well-known/**/*.json'])
+        .pipe(gulp.dest(['./dist/.well-known']))
     done();
 })
 
 // Copy _config.yml (needed for GH to not ignore .well-known folder)
 gulp.task('config-yaml', done => {
     gulp.src("_config.yml")
-        .pipe(gulp.dest("./dest/_config.yml"))
+        .pipe(gulp.dest("./dist/_config.yml"))
     done();
 })
 
