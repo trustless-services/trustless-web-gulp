@@ -29,8 +29,8 @@ gulp.task('well-known', done => {
 
 // Copy _config.yml (needed for GH to not ignore .well-known folder)
 gulp.task('config-yaml', done => {
-    gulp.src("_config.yml")
-        .pipe(gulp.dest("./dist/_config.yml"))
+    gulp.src(['_config.yml'])
+        .pipe(gulp.dest("./dist"))
     done();
 })
 

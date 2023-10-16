@@ -6,7 +6,9 @@ Generates HTML files for Trustless Services site. Follow instructions to build:
 
 `npm install -g gulp` if gulp is not on your system.
 
-`npm install` to install, `gulp ejs` to build HTML files.
+`npm install` to install.
+
+Run tasks in `gulpfile.js` such as `gulp ejs`, `gulp css`, `gulp well-known`, `gulp config-yaml` to generate new files in the `dist` folder, and then finally run `gulp deploy` to deploy them to .publish (i.e. the gh-pages branch).
 
 ## Troubleshooting
 
