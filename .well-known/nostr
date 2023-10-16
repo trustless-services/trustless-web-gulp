@@ -1,10 +1,14 @@
 {
     "names": {
-        "_": "d2b6b012485ec6dbfc7d844446d2608120d25dc54e432555582c78ce9bb65dc4"
+        "_": "d2b6b012485ec6dbfc7d844446d2608120d25dc54e432555582c78ce9bb65dc4",
+        "kishin": "d2b6b012485ec6dbfc7d844446d2608120d25dc54e432555582c78ce9bb65dc4"
     },
     "relays": {
         "d2b6b012485ec6dbfc7d844446d2608120d25dc54e432555582c78ce9bb65dc4": [
-            "wss://relay-jp.nostr.wirednet.jp"
+            "wss://relay-jp.nostr.wirednet.jp",
+            "wss://nos.lol",
+            "wss://relay.snort.social",
+            "wss://yabu.me"
         ]
     }
 }
