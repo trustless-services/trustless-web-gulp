@@ -1,5 +1,5 @@
 {
-    "callback": "https://utxo.farm/lnurlp/kishin",
+    "callback": "https://utxo.farm/.well-known/lnurlp/kishin",
     "maxSendable": 100000000,
     "minSendable": 1000,
     "metadata": "[[\"text/plain\",\"Pay to kishin@trustless-services.com (utxo.farm)\"],[\"text/identifier\",\"kishin@trustless-services.com (utxo.farm)\"]]",
