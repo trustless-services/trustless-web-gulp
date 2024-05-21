@@ -1,7 +1,9 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const ejs = require('gulp-ejs');
-const deploy = require('gulp-gh-pages')
+
+const path = require('path')
+const ghPages = require('gh-pages')
 
 // Builds ejs
 gulp.task('ejs', done => {
@@ -27,6 +29,13 @@ gulp.task('well-known', done => {
     done();
 })
 
+// Copy CNAME
+gulp.task('cname', done => {
+    gulp.src(['CNAME'])
+        .pipe(gulp.dest(['./dist']))
+    done();
+})
+
 // Copy _config.yml (needed for GH to not ignore .well-known folder)
 gulp.task('config-yaml', done => {
     gulp.src(['_config.yml'])
@@ -36,13 +45,9 @@ gulp.task('config-yaml', done => {
 
 // Deploys /dist recursively
 gulp.task('deploy', done => {
-  gulp.src("dist/**/*", { dot: true } )
-    .pipe(deploy({
-      remoteUrl: 'https://github.com/trustless-services/trustless-web-gulp.git',
-      origin: 'origin',
+  ghPages.publish(path.join(process.cwd(), "dist"), {
+      repo: 'https://github.com/trustless-services/trustless-web-gulp.git',
       branch: 'gh-pages',
-      push: true,
-      force: true
-    }));
-  done();
+      dotfiles: true
+    }, done);
 })

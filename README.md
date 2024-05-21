@@ -10,7 +10,7 @@ Generates HTML files for Trustless Services site. Follow instructions to build:
 
 Edit page and write articles by adding/editing ejs files in `/ejs`.
 
-Run tasks in `gulpfile.js` such as `gulp ejs`, `gulp css`, `gulp well-known`, `gulp config-yaml` to generate new files in the `dist` folder, and then finally run `gulp deploy` to deploy them to .publish (i.e. the gh-pages branch).
+Run tasks in `gulpfile.js` such as `gulp ejs`, `gulp css`, `gulp well-known`, `gulp cname`, `gulp config-yaml` to generate new files in the `dist` folder, and then finally run `gulp deploy` to deploy them to .publish (i.e. the gh-pages branch).
 
 ## Troubleshooting
 
