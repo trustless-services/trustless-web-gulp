@@ -22,32 +22,41 @@ gulp.task('css', done => {
   done();
 })
 
-// Copy .well-known
+// Builds js (browserified bundles etc.)
+gulp.task('js', done => {
+  gulp.src("public/**/*.js")
+    .pipe(gulp.dest("./dist/js"))
+  done();
+})
+
+// Copy .well-known (json + extensionless files such as nostr and lnurlp/*)
 gulp.task('well-known', done => {
-    gulp.src(['.well-known/**/*.json'])
-        .pipe(gulp.dest(['./dist/.well-known']))
-    done();
+  gulp.src(['.well-known/**/*'], { dot: true })
+    .pipe(gulp.dest('./dist/.well-known'))
+  done();
 })
 
 // Copy CNAME
 gulp.task('cname', done => {
-    gulp.src(['CNAME'])
-        .pipe(gulp.dest(['./dist']))
-    done();
+  gulp.src(['CNAME'])
+    .pipe(gulp.dest(['./dist']))
+  done();
 })
 
 // Copy _config.yml (needed for GH to not ignore .well-known folder)
 gulp.task('config-yaml', done => {
-    gulp.src(['_config.yml'])
-        .pipe(gulp.dest("./dist"))
-    done();
+  gulp.src(['_config.yml'])
+    .pipe(gulp.dest("./dist"))
+  done();
 })
 
 // Deploys /dist recursively
-gulp.task('deploy', done => {
+gulp.task('default', gulp.parallel('ejs', 'css', 'js', 'well-known', 'cname', 'config-yaml'))
+
+gulp.task('deploy', gulp.series('default', done => {
   ghPages.publish(path.join(process.cwd(), "dist"), {
       repo: 'https://github.com/trustless-services/trustless-web-gulp.git',
       branch: 'gh-pages',
       dotfiles: true
     }, done);
-})
+}))
